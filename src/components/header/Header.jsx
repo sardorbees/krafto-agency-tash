@@ -74,9 +74,7 @@ function Header() {
                       </div>
                       <div class="infos-content">
                         <span class="label">Telegram kanalimiz</span>
-                        {products.map((p) => (
-                          <span><a href="https://t.me/TashCleaning1">{p.name}</a></span>
-                        ))}
+                        <span><a href="https://t.me/TashCleaning1">TashCleaning</a></span>
                       </div>
                     </div>
                     <div class="infos-item">
@@ -85,9 +83,7 @@ function Header() {
                       </div>
                       <div class="infos-content">
                         <span class="label">Joylashgan joyimiz</span>
-                        {products.map((p) => (
-                          <span class="location">{p.name}</span>
-                        ))}
+                        <span class="location">Toshkent shahar, Temur Malik ko`chasi</span>
                       </div>
                     </div>
                   </div>

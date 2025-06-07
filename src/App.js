@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import axios from 'axios';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, } from "react-router-dom"
@@ -29,6 +30,7 @@ function App() {
   const handleLogout = () => setIsAuthenticated(false);
   return (
     <div>
+      <SpeedInsights />
       <BrowserRouter>
         <Header />
         <Routes>
