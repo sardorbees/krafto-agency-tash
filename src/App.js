@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route, Navigate, } from "react-router-dom"
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Main from './components/main/Main';
-import Nav from './components/nav/Nav';
 import About from './components/about/About';
 import Services from './components/services/Services';
 import Portfolio from './components/portfolio/Portfolio';

@@ -20,7 +20,7 @@ import '../../css/odometer-theme-default.css';
 import '../../css/swiper-bundle.css';
 import '../../js/aaaaa.js';
 import '../../js/sender.js';
-import CompareImage from '../compareimage/CompareImage.jsx';
+import VideoUpload from '../videoupload/VideoUpload.jsx';
 
 import video from '../assets/img/video/video1.mp4';
 import video1 from '../assets/img/video/video2.mp4';
@@ -168,10 +168,7 @@ function Portfolio() {
                                             <div class="tj-portfolio-wrapper swiper-slide">
                                                 <div className="oigjig">
                                                     <div class="tj-portfolio-thumb">
-                                                        <video src={video} controls></video>
-                                                    </div>
-                                                    <div class="tj-portfolio-thumb">
-                                                        <video src={video1} controls></video>
+                                                        <VideoUpload/>
                                                     </div>
                                                 </div>
                                             </div>

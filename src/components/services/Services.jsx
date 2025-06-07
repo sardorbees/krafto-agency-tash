@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
+import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react'; // Faqat shu kerak
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 // Import Swiper styles
@@ -27,50 +28,63 @@ import rasm2 from '../assets/img/rrrr/rasm1.jpg';
 import rasm3 from '../assets/img/rrrr/rasm2.jpg';
 import rasm4 from '../assets/img/rrrr/rasm3.jpg';
 function Services() {
-    const [open, setOpen] = useState(false);
-
-    const { id } = useParams();
-    const [product, setProduct] = useState(null);
-
+    const [photo, setPhoto] = useState(null);
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/logo/categories/${4}/`)
-            .then((res) => res.json())
-            .then((data) => setProduct(data));
-    }, [id]);
+        const fetchPhoto = async () => {
+            try {
+                const res = await axios.get(`http://localhost:8000/api/logo/categories/${4}/`);
+                setPhoto(res.data);
+            } catch (error) {
+                console.error('Ошибка загрузки фото:', error);
+            }
+        };
+        fetchPhoto();
+        const intervalId = setInterval(fetchPhoto, 1000);
+        return () => clearInterval(intervalId);
+    }, [photo]);
 
-    const { ide } = useParams();
-    const [produce, setProduce] = useState(null);
-
+    const [photes, setPhotes] = useState(null);
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/logo/categories/${5}/`)
-            .then((res) => res.json())
-            .then((data) => setProduce(data));
-    }, [ide]);
-
-    const { ides } = useParams();
-    const [produces, setProduces] = useState(null);
-
+        const fetchPhoto = async () => {
+            try {
+                const res = await axios.get(`http://localhost:8000/api/logo/categories/${5}/`);
+                setPhotes(res.data);
+            } catch (error) {
+                console.error('Ошибка загрузки фото:', error);
+            }
+        };
+        fetchPhoto();
+        const intervalId = setInterval(fetchPhoto, 1000);
+        return () => clearInterval(intervalId);
+    }, [photes]);
+    const [photed, setPhoted] = useState(null);
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/logo/categories/${6}/`)
-            .then((res) => res.json())
-            .then((data) => setProduces(data));
-    }, [ides]);
-
-    const { ided } = useParams();
-    const [produced, setProduced] = useState(null);
-
+        const fetchPhoto = async () => {
+            try {
+                const res = await axios.get(`http://localhost:8000/api/logo/categories/${7}/`);
+                setPhoted(res.data);
+            } catch (error) {
+                console.error('Ошибка загрузки фото:', error);
+            }
+        };
+        fetchPhoto();
+        const intervalId = setInterval(fetchPhoto, 1000);
+        return () => clearInterval(intervalId);
+    }, [photed]);
+    const [photeded, setPhoteded] = useState(null);
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/logo/categories/${7}/`)
-            .then((res) => res.json())
-            .then((data) => setProduced(data));
-    }, [ided]);
-
-
-
-    if (!product) return <p>Загрузка...</p>;
-    if (!produce) return <p>Загрузка...</p>;
-    if (!produces) return <p>Загрузка...</p>;
-    if (!produced) return <p>Загрузка...</p>;
+        const fetchPhoto = async () => {
+            try {
+                const res = await axios.get(`http://localhost:8000/api/logo/categories/${6}/`);
+                setPhoteded(res.data);
+            } catch (error) {
+                console.error('Ошибка загрузки фото:', error);
+            }
+        };
+        fetchPhoto();
+        const intervalId = setInterval(fetchPhoto, 1000);
+        return () => clearInterval(intervalId);
+    }, [photeded]);
 
     return (
         <div>
@@ -83,7 +97,6 @@ function Services() {
                     </svg>
                 </button>
             </div>
-
             <div class="search_popup">
                 <div class="container">
                     <div class="row">
@@ -132,9 +145,7 @@ function Services() {
                 </div>
             </div>
             <div class="search-popup-overlay"></div>
-
             <div class="cartmini-overlay"></div>
-
             <div class="hamburger-area d-xl-none">
                 <div class="hamburger_bg"></div>
                 <div class="hamburger_wrapper">
@@ -217,7 +228,9 @@ function Services() {
                             <div class="tj-service-2-wrapper">
                                 <div class="tj-service-2-item wow fadeInLeft" data-wow-delay=".5s">
                                     <div class="tj-service-2-thumb">
-                                        <img src={product.image} alt="" />
+                                        {photo?.image && (
+                                            <img src={photo.image} alt="" />
+                                        )}
                                     </div>
                                     <div class="tj-service-2-box">
                                         <div class="tj-service-2-wrap">
@@ -245,37 +258,11 @@ function Services() {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tj-service-2-item wow fadeInRight" data-wow-delay=".5s">
-                                    <div class="tj-service-2-thumb">
-                                        <img src={produce.image} alt="" />
-                                    </div>
-                                    <div class="tj-service-2-box">
-                                        <div class="tj-service-2-wrap">
-                                            <div class="tj-service-2-icon">
-                                                <img src="./img/build_1.png" alt="" />
-                                            </div>
-                                            <div class="tj-service-2-number">
-                                                <span>02</span>
-                                            </div>
-                                        </div>
-                                        <div class="tj-service-2-content">
-                                            <h4 class="tj-service-2-title"><a>Qurilishdan keyingi tozalash.</a>
-                                            </h4>
-                                            <div class="tj-service-2-button">
-                                                <a class="tj-service-2-btn tj-arrow-btn" href="tel:+998 97 492 04 04">Batafsil
-                                                    ma'lumot
-                                                    <span class="icon_box">
-                                                        <i class="icon_first fa-regular fa-arrow-right"></i>
-                                                        <i class="icon_second fa-regular fa-arrow-right"></i>
-                                                    </span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="tj-service-2-item wow fadeInLeft" data-wow-delay=".6s">
                                     <div class="tj-service-2-thumb">
-                                        <img src={produces.image} alt="" />
+                                        {photeded?.image && (
+                                            <img src={photeded.image} alt="" />
+                                        )}
                                     </div>
                                     <div class="tj-service-2-box">
                                         <div class="tj-service-2-wrap">
@@ -303,7 +290,9 @@ function Services() {
                                 </div>
                                 <div class="tj-service-2-item wow fadeInRight" data-wow-delay=".6s">
                                     <div class="tj-service-2-thumb">
-                                        <img src={produced.image} alt="" />
+                                        {photes?.image && (
+                                            <img src={photes.image} alt="" />
+                                        )}
                                     </div>
                                     <div class="tj-service-2-box">
                                         <div class="tj-service-2-wrap">

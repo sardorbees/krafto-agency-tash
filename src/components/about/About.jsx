@@ -30,7 +30,6 @@ import shape1 from '../assets/img/bot_1.png';
 import shapa2 from '../assets/img/about-member_111.png';
 import call_home from '../assets/img/about-thumb.png';
 function About() {
-    const [open, setOpen] = useState(false);
     return (
         <div>
             <div class="body-overlay"></div>
@@ -248,8 +247,6 @@ function About() {
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="tj-before-after-wrapper wow fadeInUp" data-wow-delay=".5s">
-                                    {/* <img src="./img/before-after-1.png" alt=""/>
-                            <img src="./img/before-after-2.png" alt=""/> */}
                                     <CompareImage />
                                 </div>
                             </div>
