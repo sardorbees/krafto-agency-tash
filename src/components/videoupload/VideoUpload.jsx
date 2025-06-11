@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api/video/videos/';
+const API_URL = 'https://admin-new-xp8v.onrender.com/api/video/videos/';
 
 function VideoUpload() {
     const [videos, setVideos] = useState([]);
