@@ -42,7 +42,6 @@ function Services() {
         const intervalId = setInterval(fetchPhoto, 1000);
         return () => clearInterval(intervalId);
     }, [photo]);
-
     const [photes, setPhotes] = useState(null);
     useEffect(() => {
         const fetchPhoto = async () => {

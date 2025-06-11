@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react'; // Faqat shu kerak
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Collapse, Button, Card } from 'react-bootstrap';
+import axios from "axios";
 
 
 import 'swiper/css';
@@ -36,8 +37,6 @@ function Contact() {
     const TELEGRAM_BOT_TOKEN = '7848989985:AAGBYLYCxCWMx3sDicNH1jyhzPvDas7DPh8';
     const TELEGRAM_CHAT_ID = '@tashclaening';
     const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
-
-
     async function sendEmailTelegram(event) {
         event.preventDefault();
 
@@ -82,6 +81,20 @@ function Contact() {
             formBtn.textContent = 'Yuborish';
         }
     }
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get("http://127.0.0.1:8000/api/category/categories/")
+            .then((response) => {
+                setData(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
+
 
     return (
         <div>
@@ -228,6 +241,12 @@ function Contact() {
                             <div class="col-lg-6">
                                 <div class="tj-contact-inner-page-info-box wow fadeInRight" data-wow-delay=".5s">
                                     <h3 class="tj-contact-inner-page-info-title">Bog'lanish uchun ma'lumot</h3>
+                                    <h1 className="tj-contact-inner-page-info-title">Список пользователей:</h1>
+                                    <ul class="tj-contact-inner-page-info-number">
+                                        {data.map((user) => (
+                                            <li key={user.id}> {user.category_name} ({user.slug}) </li>
+                                        ))}
+                                    </ul>
                                     <ul class="tj-contact-inner-page-info-list">
                                         <li>
                                             <div class="tj-contact-inner-page-info-item">
