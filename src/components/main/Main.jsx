@@ -57,7 +57,7 @@ function Main() {
 
     const fetchProducts = async () => {
         try {
-            const res = await axios.get('http://127.0.0.1:8000/api/video/videos/');
+            const res = await axios.get('https://admin-new-xp8v.onrender.com/api/video/videos/');
             setVideos(res.data);
         } catch (error) {
             console.error('Ошибка при получении данных:', error);

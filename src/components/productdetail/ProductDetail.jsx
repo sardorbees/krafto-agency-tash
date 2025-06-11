@@ -9,7 +9,7 @@ const ProductDetail = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            axios.get('http://127.0.0.1:8000/api/shop/product/1/')
+            axios.get('https://admin-new-xp8v.onrender.com/api/shop/product/1/')
                 .then((res) => {
                     setProduct(res.data);
                 })

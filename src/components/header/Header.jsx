@@ -30,7 +30,7 @@ function Header() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://127.0.0.1:8000/api/location/yourmodel/');
+      const res = await axios.get('https://admin-new-xp8v.onrender.com/api/location/yourmodel/');
       setProducts(res.data);
     } catch (error) {
       console.error('Ошибка при получении данных:', error);

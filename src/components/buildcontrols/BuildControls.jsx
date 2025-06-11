@@ -6,7 +6,7 @@ const ProductList = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://127.0.0.1:8000/base/main-page-service-card-content/');
+      const res = await axios.get('https://admin-new-xp8v.onrender.com/base/main-page-service-card-content/');
       setProducts(res.data);
     } catch (error) {
       console.error('Ошибка при получении данных:', error);

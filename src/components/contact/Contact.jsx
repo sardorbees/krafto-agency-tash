@@ -86,7 +86,7 @@ function Contact() {
 
     useEffect(() => {
         axios
-            .get("http://127.0.0.1:8000/api/category/categories/")
+            .get("https://admin-new-xp8v.onrender.com/api/category/categories/")
             .then((response) => {
                 setData(response.data);
             })

@@ -22,11 +22,6 @@ import '../../css/swiper-bundle.css';
 import '../../js/aaaaa.js';
 import '../../js/sender.js';
 import CompareImage from '../compareimage/CompareImage.jsx';
-
-import rasm1 from '../assets/img/rrrr/rasm.jpg';
-import rasm2 from '../assets/img/rrrr/rasm1.jpg';
-import rasm3 from '../assets/img/rrrr/rasm2.jpg';
-import rasm4 from '../assets/img/rrrr/rasm3.jpg';
 function Services() {
     const [photo, setPhoto] = useState(null);
     useEffect(() => {

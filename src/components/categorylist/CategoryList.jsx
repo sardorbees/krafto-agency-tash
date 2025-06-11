@@ -6,7 +6,7 @@ const CategoryList = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/category/category-page-content/')
+    axios.get('https://admin-new-xp8v.onrender.com/api/category/category-page-content/')
       .then(res => {
         setCategories(res.data);
       })
