@@ -1,32 +1,25 @@
 import React, { useState } from 'react';
-import axiosInstance from '../api/Api';
+import axios from '../api/axiosInstance';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
-    const [formData, setFormData] = useState({ username: '', email: '', password: '' });
-    const [error, setError] = useState('');
+  const [form, setForm] = useState({ username: '', email: '', password: '' });
+  const navigate = useNavigate();
 
-    const handleChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await axios.post('/register/', form);
+    navigate('/login');
+  };
 
-    const handleSubmit = async e => {
-        e.preventDefault();
-        try {
-            await axiosInstance.post('user/api/register/', formData);
-            alert('Регистрация успешна! Войдите.');
-        } catch (err) {
-            setError('Ошибка регистрации');
-        }
-    };
-
-    return (
-        <form onSubmit={handleSubmit}>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <input name="username" placeholder="Имя" onChange={handleChange} required />
-            <input name="email" placeholder="Email" type="email" onChange={handleChange} required />
-            <input name="password" placeholder="Пароль" type="password" onChange={handleChange} required />
-            <button type="submit">Зарегистрироваться</button>
-            {error && <p>{error}</p>}
-        </form>
-    );
+  return (
+    <form onSubmit={handleSubmit}>
+      <input onChange={e => setForm({...form, username: e.target.value})} placeholder="Username" />
+      <input onChange={e => setForm({...form, email: e.target.value})} placeholder="Email" />
+      <input onChange={e => setForm({...form, password: e.target.value})} type="password" placeholder="Password" />
+      <button type="submit">Register</button>
+    </form>
+  );
 };
 
 export default Register;

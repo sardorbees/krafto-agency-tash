@@ -241,12 +241,6 @@ function Contact() {
                             <div class="col-lg-6">
                                 <div class="tj-contact-inner-page-info-box wow fadeInRight" data-wow-delay=".5s">
                                     <h3 class="tj-contact-inner-page-info-title">Bog'lanish uchun ma'lumot</h3>
-                                    <h1 className="tj-contact-inner-page-info-title">Список пользователей:</h1>
-                                    <ul class="tj-contact-inner-page-info-number">
-                                        {data.map((user) => (
-                                            <li key={user.id}> {user.category_name} ({user.slug}) </li>
-                                        ))}
-                                    </ul>
                                     <ul class="tj-contact-inner-page-info-list">
                                         <li>
                                             <div class="tj-contact-inner-page-info-item">

@@ -17,6 +17,9 @@ import CategoryList from './components/categorylist/CategoryList'
 import TelegramForm from './components/telegramform/TelegramForm';
 import Comments from './components/comments/Comments';
 import LocationList from './components/locationlist/LocationList';
+// import Login from './components/login/Login'
+// import Register from './components/register/Register'
+// import Profile from './components/profile/Profile'
 function App() {
   return (
     <div>
@@ -33,6 +36,9 @@ function App() {
           <Route path='/categorylist/:id' element={<CategoryList />} />
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/comments" element={<Comments />} />
+          {/* <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile />} /> */}
           <Route path="/telegramform" element={<TelegramForm />} />
           <Route path="/locationlist" element={<LocationList />} />
           <Route path="*" element={<h2><br></br><br></br><br></br> 404 - Страница не найдена <br></br></h2>} />

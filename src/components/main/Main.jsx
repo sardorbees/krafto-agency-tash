@@ -112,7 +112,7 @@ function Main() {
                                         </p>
                                     </div>
                                     <div class="tj-slider-btn-box wow fadeInUp" data-wow-delay=".6s">
-                                        <a class="tj-primary-btn tj-hover-btn" href="contact.html"><span>Batafsil tasvirlab
+                                        <a class="tj-primary-btn tj-hover-btn" href="/contact"><span>Batafsil tasvirlab
                                             bering</span>
                                             <div class="tj-hover-btn-circle-dot"></div>
                                         </a>
@@ -426,7 +426,7 @@ function Main() {
                                                     kvartirani, shu jumladan borish qiyin bo'lgan joylarni yaxshilab
                                                     tozalash va tartibga solishga qaratilgan xizmatlar to'plami.</p>
                                                 <div class="tj-service-btn">
-                                                    <a class="tj-secondary-btn tj-hover-btn" href="contact.html"><span>Aloqa
+                                                    <a class="tj-secondary-btn tj-hover-btn" href="/contact"><span>Aloqa
                                                         Chiqing</span>
                                                         <div class="tj-hover-btn-circle-dot"></div>
                                                     </a>
@@ -448,7 +448,7 @@ function Main() {
                                                     ish joyingizni toza saqlashingiz mumkin. Bu to'liq vaqtli
                                                     tozalovchilarni yollashdan ko'ra arzonroq va osonroq.</p>
                                                 <div class="tj-service-btn">
-                                                    <a class="tj-secondary-btn tj-hover-btn" href="contact.html"><span>Aloqa
+                                                    <a class="tj-secondary-btn tj-hover-btn" href="/contact"><span>Aloqa
                                                         Chiqing</span>
                                                         <div class="tj-hover-btn-circle-dot"></div>
                                                     </a>
@@ -467,7 +467,7 @@ function Main() {
                                             <div class="tj-service-bottom-wrapper text-center">
                                                 <h4 class="tj-service-bottom-title">Dezinfeksiyadan keyingi tozalash.</h4>
                                                 <div class="tj-service-btn">
-                                                    <a class="tj-secondary-btn tj-hover-btn" href="contact.html"><span>Aloqa
+                                                    <a class="tj-secondary-btn tj-hover-btn" href="/contact"><span>Aloqa
                                                         Chiqing</span>
                                                         <div class="tj-hover-btn-circle-dot"></div>
                                                     </a>
@@ -487,7 +487,7 @@ function Main() {
                                                 <h4 class="tj-service-bottom-title">Toʻy va marosimlarda idishlarni yuvish.
                                                 </h4>
                                                 <div class="tj-service-btn">
-                                                    <a class="tj-secondary-btn tj-hover-btn" href="contact.html"><span>Aloqa
+                                                    <a class="tj-secondary-btn tj-hover-btn" href="/contact"><span>Aloqa
                                                         Chiqing</span>
                                                         <div class="tj-hover-btn-circle-dot"></div>
                                                     </a>
@@ -509,7 +509,7 @@ function Main() {
                                                     ish joyingizni toza saqlashingiz mumkin. Bu to'liq vaqtli
                                                     tozalovchilarni yollashdan ko'ra arzonroq va osonroq.</p>
                                                 <div class="tj-service-btn">
-                                                    <a class="tj-secondary-btn tj-hover-btn" href="contact.html"><span>Aloqa
+                                                    <a class="tj-secondary-btn tj-hover-btn" href="/contact"><span>Aloqa
                                                         Chiqing</span>
                                                         <div class="tj-hover-btn-circle-dot"></div>
                                                     </a>
@@ -630,7 +630,7 @@ function Main() {
                         </div>
                         <div class="col-xl-5 col-lg-4 col-md-4 col-12">
                             <div class="tj-choose-us-bottom-button wow fadeInRight" data-wow-delay=".3s">
-                                <a class="tj-white-btn tj-hover-btn" href="contact.html"><span>Biz bilan bog'lanish</span>
+                                <a class="tj-white-btn tj-hover-btn" href="/contact"><span>Biz bilan bog'lanish</span>
                                     <div class="tj-hover-btn-circle-dot"></div>
                                 </a>
                             </div>
@@ -658,7 +658,7 @@ function Main() {
                                 </div>
                                 <div class="tj-portfolio-top-button wow fadeInRight d-none d-lg-inline-block"
                                     data-wow-delay=".3s">
-                                    <a class="tj-round-btn" href="contact.html">Aloqa Chiqing<i
+                                    <a class="tj-round-btn" href="/contact">Aloqa Chiqing<i
                                         class="fa-regular fa-arrow-up-right"></i></a>
                                 </div>
                             </div>
