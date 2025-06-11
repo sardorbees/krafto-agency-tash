@@ -1,0 +1,6 @@
+services:
+- type: static
+  name: myportfolio-frontend
+  env: node
+  buildCommand: npm install && npm run build
+  startCommand: serve -s build
