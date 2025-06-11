@@ -9,7 +9,7 @@ const CompareImage = () => {
 
     const fetchPhoto = async () => {
         try {
-            const res = await axios.get(`http://admin-new-xp8v.onrender.com/api/logo/categories/${1}/`);
+            const res = await axios.get(`https://admin-new-xp8v.onrender.com/api/logo/categories/${1}/`);
             setPhoto(res.data);
         } catch (error) {
             console.error('Ошибка при получении фото:', error);
@@ -28,7 +28,7 @@ const CompareImage = () => {
 
     const fetchPhotoe = async () => {
         try {
-            const res = await axios.get(`http://admin-new-xp8v.onrender.com/api/logo/categories/${2}/`);
+            const res = await axios.get(`https://admin-new-xp8v.onrender.com/api/logo/categories/${2}/`);
             setPhotos(res.data);
         } catch (error) {
             console.error('Ошибка при получении фото:', error);

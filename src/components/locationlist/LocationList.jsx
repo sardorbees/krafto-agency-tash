@@ -5,7 +5,7 @@ const LocationList = () => {
     const [locations, setLocations] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/locations/locations/")
+        axios.get("https://admin-new-xp8v.onrender.com/api/locations/locations/")
             .then(res => setLocations(res.data))
             .catch(err => console.error("Ошибка при загрузке локаций:", err));
     }, []);

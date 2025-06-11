@@ -32,7 +32,7 @@ function Services() {
     useEffect(() => {
         const fetchPhoto = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/logo/categories/${4}/`);
+                const res = await axios.get(`https://admin-new-xp8v.onrender.com/api/logo/categories/${4}/`);
                 setPhoto(res.data);
             } catch (error) {
                 console.error('Ошибка загрузки фото:', error);
@@ -46,7 +46,7 @@ function Services() {
     useEffect(() => {
         const fetchPhoto = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/logo/categories/${5}/`);
+                const res = await axios.get(`https://admin-new-xp8v.onrender.com/api/logo/categories/${5}/`);
                 setPhotes(res.data);
             } catch (error) {
                 console.error('Ошибка загрузки фото:', error);
@@ -60,7 +60,7 @@ function Services() {
     useEffect(() => {
         const fetchPhoto = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/logo/categories/${7}/`);
+                const res = await axios.get(`https://admin-new-xp8v.onrender.com/api/logo/categories/${7}/`);
                 setPhoted(res.data);
             } catch (error) {
                 console.error('Ошибка загрузки фото:', error);
@@ -74,7 +74,7 @@ function Services() {
     useEffect(() => {
         const fetchPhoto = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/logo/categories/${6}/`);
+                const res = await axios.get(`https://admin-new-xp8v.onrender.com/api/logo/categories/${6}/`);
                 setPhoteded(res.data);
             } catch (error) {
                 console.error('Ошибка загрузки фото:', error);
