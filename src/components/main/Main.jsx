@@ -51,8 +51,6 @@ function Main() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-
     const [videos, setVideos] = useState([]);
 
     const fetchProducts = async () => {
@@ -86,7 +84,6 @@ function Main() {
                     </svg>
                 </button>
             </div>
-
             <section class="tj-slider-area fix scene">
                 <div class="tj-slider-height">
                     <div class="tj-slider-bg tj-slider-overlay" data-background="assets/images/slider/slider-3-bg-.jpg">

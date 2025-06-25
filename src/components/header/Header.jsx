@@ -18,6 +18,7 @@ import email from '../assets/img/osdhgusgu.png';
 import email1 from '../assets/img/email.png';
 import telegarm from '../assets/img/osdhgusgu.png';
 import instagram from '../assets/img/icon/insta.png';
+import LanguageToggle from '../languageтoggle/LanguageToggle'
 function Header() {
   const [open, setOpen] = useState(false);
 
@@ -84,6 +85,7 @@ function Header() {
                       <div class="infos-content">
                         <span class="label">Joylashgan joyimiz</span>
                         <span class="location">Toshkent shahar, Temur Malik ko`chasi</span>
+                        <LanguageToggle />
                       </div>
                     </div>
                   </div>
