@@ -27,7 +27,6 @@ import TeamList from './components/teamlist/TeamList'
 import ServiceList from './components/servicelist/ServiceList';
 import Clients from './components/clients/Clients'
 import MessageForm from './components/messagаform/MessageForm';
-// import OrderForm from './components/orderform/OrderForm';
 function App() {
   return (
     <div>

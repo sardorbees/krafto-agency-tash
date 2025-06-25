@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8000/api/clientlogo/clients/';
+const API_URL = 'https://krafto-agency-admin.onrender.com/api/clientlogo/clients/';
 
 function Clients() {
   const [clients, setClients] = useState([]);
