@@ -43,10 +43,10 @@ const ApplicationForm = () => {
 
         try {
             // 1. Отправка в Django
-            await axios.post('http://127.0.0.1:8000/api/applicationapi/application/', formData);
+            await axios.post('https://krafto-agency-admin.onrender.com/api/applicationapi/application/', formData);
 
             // 2. Отправка Telegram уведомления
-            await axios.post('http://127.0.0.1:8000/api/applicationsend-telegram/', formData);
+            await axios.post('https://krafto-agency-admin.onrender.com/api/applicationsend-telegram/', formData);
 
             setSuccess(true);
             setFormData({
